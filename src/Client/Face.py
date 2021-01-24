@@ -51,8 +51,8 @@ class Face:
 	def trainImage(self):
 		faces, labels = self.getImagesAndLabels()
 		self.recognizer.train(faces, np.array(labels))
-		self.recognizer.write('Face/face.yml')
-		self.recognizer.read('Face/face.yml')
+		self.recognizer.write('src/Client/Face/face.yml')
+		self.recognizer.read('src/Client/Face/face.yml')
 		print("\n  {0} faces trained.".format(len(np.unique(labels))))
 
 	def face_detect(self, img):
