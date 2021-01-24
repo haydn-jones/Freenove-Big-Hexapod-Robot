@@ -528,7 +528,7 @@ class MyWindow(QMainWindow, Ui_client):
 	#CONNECT
 	def connect(self):
 		try:
-			file = open('IP.txt', 'w')
+			file = open('src/Client/IP.txt', 'w')
 			file.write(self.lineEdit_IP_Adress.text())
 			file.close()
 			if self.Button_Connect.text() == 'Connect':
@@ -778,8 +778,8 @@ class faceWindow(QMainWindow, Ui_Face):
 		cv2.cvtColor(self.face_image, cv2.COLOR_BGR2RGB, self.face_image)
 		cv2.imwrite('Face/' + str(len(self.client.face.name)) + '.jpg', self.face_image)
 		self.client.face.name.append([str(len(self.client.face.name)), str(self.name)])
-		self.client.face.Save_to_txt(self.client.face.name, 'Face/name')
-		self.client.face.name = self.client.face.Read_from_txt('Face/name')
+		self.client.face.Save_to_txt(self.client.face.name, 'src/Client/Face/name')
+		self.client.face.name = self.client.face.Read_from_txt('src/Client/Face/name')
 		self.photoCount += 1
 		self.Button_Read_Face.setText("Reading " + str(0) + " S " + str(self.photoCount) + "/30")
 
@@ -988,7 +988,7 @@ class calibrationWindow(QMainWindow, Ui_calibration):
 		self.point[3][1] = self.four_y.text()
 		self.point[3][2] = self.four_z.text()
 
-		self.Save_to_txt(self.point, 'point')
+		self.Save_to_txt(self.point, 'src/Client/point')
 		reply = QMessageBox.information(self, "Message", "Saved successfully", QMessageBox.Yes)
 		#print(command)
 	def Read_from_txt(self, filename):

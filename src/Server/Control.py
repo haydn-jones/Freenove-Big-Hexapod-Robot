@@ -257,7 +257,7 @@ class Control:
 						self.calibration()
 						self.setLegAngle()
 					elif self.order[1] == "save":
-						self.saveToTxt(self.calibration_leg_point, 'point')
+						self.saveToTxt(self.calibration_leg_point, 'src/Server/point')
 				self.order = ['', '', '', '', '', '']
 
 	def relax(self, flag):
