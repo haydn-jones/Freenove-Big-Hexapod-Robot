@@ -5,13 +5,13 @@ import copy
 import socket
 import struct
 import threading
-from PID import *
-from Face import *
+from Client.PID import *
+from Client.Face import *
 import numpy as np
-from Thread import *
+from Client.Thread import *
 import multiprocessing
 from PIL import Image, ImageDraw
-from Command import COMMAND as cmd
+from Client.Command import COMMAND as cmd
 
 class Client:
 

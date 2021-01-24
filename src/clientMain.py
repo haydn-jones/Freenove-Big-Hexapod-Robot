@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 import sys
 import math
-from ui_led import Ui_led
-from ui_face import Ui_Face
-from ui_client import Ui_client
+from Client.ui_led import Ui_led
+from Client.ui_face import Ui_Face
+from Client.ui_client import Ui_client
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from Client import *
-from Calibration import *
+from Client.Client import *
+from Client.Calibration import *
+import numpy as np
 
 class MyWindow(QMainWindow, Ui_client):
 
@@ -21,7 +22,7 @@ class MyWindow(QMainWindow, Ui_client):
 		self.Video.setPixmap(QPixmap('Picture/Spider_client.png'))
 
 		self.client = Client()
-		file = open('IP.txt', 'r')
+		file = open('src/Client/IP.txt', 'r')
 		self.lineEdit_IP_Adress.setText(str(file.readline()))
 		file.close()
 

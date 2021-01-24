@@ -1,5 +1,5 @@
 import time
-from Led import *
+from Server.Led import *
 led = Led()
 
 def test_Led():
@@ -30,7 +30,7 @@ def test_Led():
 		led.colorWipe(led.strip, Color(0, 0, 0))  #turn off the light
 		print("\nEnd of program")
 
-from Ultrasonic import *
+from Server.Ultrasonic import *
 ultrasonic = Ultrasonic()
 
 def test_Ultrasonic():
@@ -42,7 +42,7 @@ def test_Ultrasonic():
 	except KeyboardInterrupt:
 		print("\nEnd of program")
 
-from Servo import *
+from Server.Servo import *
 servo = Servo()
 
 def test_Servo():
@@ -76,7 +76,7 @@ def test_Servo():
 	except KeyboardInterrupt:
 		print("\nEnd of program")
 
-from ADS7830 import *
+from Server.ADS7830 import *
 adc = ADS7830()
 
 def test_Adc():
@@ -88,7 +88,7 @@ def test_Adc():
 	except KeyboardInterrupt:
 		print("\nEnd of program")
 
-from Buzzer import *
+from Server.Buzzer import *
 buzzer = Buzzer()
 
 def test_Buzzer():
@@ -107,7 +107,7 @@ def test_Buzzer():
 		print("\nEnd of program")
 
 import threading
-from Control import *
+from Server.Control import *
 
 # Main program logic follows:
 def aa():

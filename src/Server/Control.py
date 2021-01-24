@@ -3,13 +3,13 @@ import time
 import math
 import smbus
 import copy
-from IMU import *
-from PID import *
+from Server.IMU import *
+from Server.PID import *
 import threading
-from Servo import *
+from Server.Servo import *
 import numpy as np
 import RPi.GPIO as GPIO
-from Command import COMMAND as cmd
+from Server.Command import COMMAND as cmd
 
 class Control:
 

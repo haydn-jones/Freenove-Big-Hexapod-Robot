@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 import os
 import sys, getopt
-from ui_server import Ui_server
+from Server.ui_server import Ui_server
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
-from Server import *
-from Control import *
+from Server.Server import *
+from Server.Control import *
 
 class MyWindow(QMainWindow, Ui_server):
 

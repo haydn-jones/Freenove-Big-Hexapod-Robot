@@ -6,14 +6,14 @@ import socket
 import struct
 import picamera
 import threading
-from Led import *
-from Servo import *
-from Thread import *
-from Buzzer import *
-from Control import *
-from ADS7830 import *
-from Ultrasonic import *
-from Command import COMMAND as cmd
+from Server.Led import *
+from Server.Servo import *
+from Server.Thread import *
+from Server.Buzzer import *
+from Server.Control import *
+from Server.ADS7830 import *
+from Server.Ultrasonic import *
+from Server.Command import COMMAND as cmd
 
 class Server:
 

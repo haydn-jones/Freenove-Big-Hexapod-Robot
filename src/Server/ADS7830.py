@@ -23,6 +23,7 @@ class ADS7830:
 		return data
 
 	def voltage(self, channel):
+		battery_voltage = float("nan")
 		if channel == 0 or channel == 4:
 			data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 			if self.battery1_flag == False or self.battery2_flag == False:

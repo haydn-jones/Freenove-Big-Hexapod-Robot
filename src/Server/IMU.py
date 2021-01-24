@@ -2,7 +2,7 @@
 import time
 import math
 import os
-from Kalman import *
+from Server.Kalman import *
 from mpu6050 import mpu6050
 
 class IMU:
@@ -47,6 +47,7 @@ class IMU:
 		sum_gyro_y = 0
 		sum_gyro_z = 0
 
+		accel_data, gyro_data = None, None
 		for i in range(100):
 			accel_data = self.sensor.get_accel_data()
 			gyro_data = self.sensor.get_gyro_data()

@@ -7,9 +7,9 @@ class Face:
 
 	def __init__(self):
 		self.recognizer = cv2.face.LBPHFaceRecognizer_create()
-		self.recognizer.read('Face/face.yml')
-		self.detector = cv2.CascadeClassifier("Face/haarcascade_frontalface_default.xml")
-		self.name = self.Read_from_txt('Face/name')
+		self.recognizer.read('src/Client/Face/face.yml')
+		self.detector = cv2.CascadeClassifier("src/Client/Face/haarcascade_frontalface_default.xml")
+		self.name = self.Read_from_txt('src/Client/Face/name')
 
 	def Read_from_txt(self, filename):
 		file1 = open(filename + ".txt", "r")
