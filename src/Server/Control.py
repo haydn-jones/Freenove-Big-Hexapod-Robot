@@ -45,7 +45,7 @@ class Control:
 		                   [-137.1,
 		                    189.4,
 		                    self.height]]
-		self.calibration_leg_point = self.readFromTxt('point')
+		self.calibration_leg_point = self.readFromTxt('src/Server/point')
 		self.leg_point = [[140, 0, 0], [140, 0, 0], [140, 0, 0], [140, 0, 0], [140, 0, 0], [140, 0, 0]]
 		self.calibration_angle = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
 		self.angle = [[90, 0, 0], [90, 0, 0], [90, 0, 0], [90, 0, 0], [90, 0, 0], [90, 0, 0]]
