@@ -1,4 +1,3 @@
-#encoding : UTF-8
 import time
 
 class Incremental_PID:

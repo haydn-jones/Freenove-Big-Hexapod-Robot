@@ -1,4 +1,3 @@
-# -*-coding: utf-8 -*-
 import time
 from rpi_ws281x import *
 # LED strip configuration:

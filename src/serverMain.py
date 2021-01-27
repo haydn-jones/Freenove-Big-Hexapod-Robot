@@ -1,15 +1,10 @@
-# -*- coding: utf-8 -*-
-import os
-from PyQt5.QtCore import *
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
+import signal
 from Server.Server import *
 from Server.Control import *
+from Server.Thread import stop_thread
 
-class MyWindow:
+class ServerControl:
 	def __init__(self):
-		self.user_ui = True
-		self.start_tcp = False
 		self.server = Server()
 
 		self.server.turn_on_server()
@@ -19,23 +14,23 @@ class MyWindow:
 		self.instruction = threading.Thread(target = self.server.receive_instruction)
 		self.instruction.start()
 
-	def closeEvent(self, event):
+	def close(self, *args, **kwargs):
+		print("Shutting down threads...")
 		try:
 			stop_thread(self.video)
 			stop_thread(self.instruction)
 		except:
 			pass
+
+		print("Shutting down sockets...")
 		try:
 			self.server.server_socket.shutdown(2)
 			self.server.server_socket1.shutdown(2)
 			self.server.turn_off_server()
 		except:
 			pass
-		os._exit(0)
+		exit(0)
 
 if __name__ == '__main__':
-	myshow = MyWindow()
-	try:
-		pass
-	except KeyboardInterrupt:
-		myshow.closeEvent(myshow)
+	server = ServerControl()
+	signal.signal(signal.SIGINT, server.close)
