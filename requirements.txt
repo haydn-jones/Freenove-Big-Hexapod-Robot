@@ -2,3 +2,6 @@ rpi_ws281x
 picamera
 numpy
 RPi.GPIO
+opencv-python
+opencv_contrib_python
+pillow

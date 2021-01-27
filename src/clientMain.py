@@ -4,7 +4,7 @@ import math
 from Client.ui_led import Ui_led
 from Client.ui_face import Ui_Face
 from Client.ui_client import Ui_client
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
@@ -17,9 +17,9 @@ class MyWindow(QMainWindow, Ui_client):
 	def __init__(self):
 		super(MyWindow, self).__init__()
 		self.setupUi(self)
-		self.setWindowIcon(QIcon('Picture/logo_Mini.png'))
+		self.setWindowIcon(QIcon('src/Client/Picture/Picture/logo_Mini.png'))
 		self.Video.setScaledContents(True)
-		self.Video.setPixmap(QPixmap('Picture/Spider_client.png'))
+		self.Video.setPixmap(QPixmap('src/Client/Picture/Spider_client.png'))
 
 		self.client = Client()
 		file = open('src/Client/IP.txt', 'r')

@@ -1,17 +1,12 @@
 # -*- coding: utf-8 -*-
 import io
-import math
-import copy
 import socket
 import struct
-import threading
 from Client.PID import *
 from Client.Face import *
 import numpy as np
 from Client.Thread import *
-import multiprocessing
-from PIL import Image, ImageDraw
-from Client.Command import COMMAND as cmd
+from PIL import Image
 
 class Client:
 
