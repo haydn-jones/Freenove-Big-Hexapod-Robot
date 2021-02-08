@@ -10,7 +10,7 @@ from PyQt5.QtGui import *
 from Client.Client import *
 from Client.Calibration import *
 import numpy as np
-from Client.Command import COMMAND as cmd
+from Server.Command import COMMAND as cmd
 
 class MyWindow(QMainWindow, Ui_client):
 
